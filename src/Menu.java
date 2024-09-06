@@ -17,67 +17,6 @@ public class Menu {
         estudiantes = new ArrayList<>();   // Inicializamos la lista de estudiantes
         inicializarCursos();  // Cargar cursos iniciales
     }
- // Método para inicializar datos iniciales
-    private void inicializarCursos() {
-        // Profesores
-        Profesor profesorMatematica = new Profesor("Dr. Juan Pérez", "12345678-9", "juan.perez@universidad.edu", "Matemáticas");
-        Profesor profesorFisica = new Profesor("Dr. Laura Gómez", "98765432-1", "laura.gomez@universidad.edu", "Física");
-        Profesor profesorProgramacion = new Profesor("Ing. Carlos Ruiz", "45678901-2", "carlos.ruiz@universidad.edu", "Programación");
-        
-        // Crear estudiantes
-        Estudiante estudiante1 = new Estudiante("Ana Pérez", 1, "12345678-9", "ana@example.com");
-        Estudiante estudiante2 = new Estudiante("Luis Soto", 2, "87654321-0", "luis@example.com");
-        Estudiante estudiante3 = new Estudiante("Maria Diaz", 3, "11223344-5", "maria@example.com");
-        Estudiante estudiante4 = new Estudiante("Carlos Rojas", 4, "55667788-6", "carlos@example.com");
-        Estudiante estudiante5 = new Estudiante("Laura Gomez", 5, "99887766-1", "laura@example.com");
-
-        // Crear los cursos
-        Curso cursoMatematica = new Curso("Matemática 1", "Curso de matemáticas avanzadas", profesorMatematica);
-        Curso cursoFisica = new Curso("Física 2", "Curso de física moderna", profesorFisica);
-        Curso cursoProgramacion = new Curso("Programación Avanzada", "Curso avanzado de programación en Java", profesorProgramacion);
-
-        Carpeta carpeta1 = new Carpeta("MAT 1001-A Ayudantía", 10001, true);
-        Carpeta carpeta2 = new Carpeta("MAT 1001-A Control", 10051, true);
-        Carpeta carpeta3 = new Carpeta("MAT 1001-A Clases Unidad 3", 10383);
-        Carpeta carpeta4 = new Carpeta("FIS-1002-2/A Ejercicios Prueba 2", 10022, false);
-        Carpeta carpeta5 = new Carpeta("FIS-1002-2/A Certamenes", 10328, false);
-        Carpeta carpeta6 = new Carpeta("FIS-1002-2/A Clases 2021 2do Semestre", 10327, true);
-        Carpeta carpeta7 = new Carpeta("FIS-1002-2/A Clases 2024 1er Semestre", 10346, true);
-        Carpeta carpeta8 = new Carpeta("ICI-2121-3 Proyectos 2023", 20032, false);
-        Carpeta carpeta9 = new Carpeta("ICI-2121-3 Controles Ayudantía", 65702, true);
-        Carpeta carpeta10 = new Carpeta("Mat 1001-A Ayudantía", 10001);
-
-        // Agregar los cursos a la lista
-        cursos.add(cursoMatematica);
-        cursos.add(cursoFisica);
-        cursos.add(cursoProgramacion);
-        
-        cursos.get(0).agregarCarpeta(carpeta1);
-        cursos.get(0).agregarCarpeta(carpeta2);
-        cursos.get(0).agregarCarpeta(carpeta3);
-
-        cursos.get(1).agregarCarpeta(carpeta4);
-        cursos.get(1).agregarCarpeta(carpeta5);
-        cursos.get(1).agregarCarpeta(carpeta6);
-        cursos.get(1).agregarCarpeta(carpeta7);
-
-        cursos.get(2).agregarCarpeta(carpeta8);
-        cursos.get(2).agregarCarpeta(carpeta9);
-        cursos.get(2).agregarCarpeta(carpeta10);
-        
-        estudiantes.add(estudiante1);
-        estudiantes.add(estudiante2);
-        estudiantes.add(estudiante3);
-        estudiantes.add(estudiante4);
-        estudiantes.add(estudiante5);
-     
-     // Asignar los estudiantes a sus cursos correspondientes cursos
-        for (Curso curso : cursos) {
-            for (Estudiante estudiante : estudiantes) {
-            	curso.agregarEstudiante(estudiante);
-            }
-        }
-    }
 
     // Método para iniciar el menú principal
     public void iniciar() {
